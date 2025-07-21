@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "พงษ์เทพ พัตทะโวหาร",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 48, "left": 52.84, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -66.9,
+      "left": -82.2,
+      "attrs": { "temperature": "37.5", "humidity": "60.5" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v9.6", "h201.6" ] ],
+    [ "dht1:SDA", "esp:D0", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,39 @@
+# Arduino IDE / VS Code specific files
+*.ino.hex
+*.ino.bin
+*.elf
+*.lst
+*.map
+*.eep
+*.o
+*.d
+*.gcno
+*.gcda
+*.gcov
+*.su
+*.sym
+
+# Arduino specific folders
+build/
+.arduino/
+.vscode/
+.idea/
+.theia/
+
+# Log files or large temporary text files (if applicable)
+*.log
+*.tmp
+# หากมีไฟล์ .txt ที่เป็นแค่ log file ขนาดใหญ่ ให้เพิ่มชื่อไฟล์นั้นๆ หรือ *.txt ไปด้วย
+# ตัวอย่าง:
+# my_sensor_data.txt
+# data_logs/*.txt
+
+# Mac specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# General IDE / system files
+*.swp
+*~

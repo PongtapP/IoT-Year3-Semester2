@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "พงษ์เทพ พัตทะโวหาร",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 38.4, "left": -148.76, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -51.4,
+      "left": 105.6,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": 13.4, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led2", "top": 6, "left": 51.8, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led3", "top": 6, "left": 90.2, "attrs": { "color": "blue" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "btn1:2.l", "black", [ "v0" ] ],
+    [ "btn1:1.r", "esp:15", "green", [ "v0", "h38.6", "v182.4" ] ],
+    [ "led1:A", "esp:5", "green", [ "v0" ] ],
+    [ "led2:A", "esp:18", "green", [ "v0" ] ],
+    [ "led3:A", "esp:19", "green", [ "v0" ] ],
+    [ "esp:GND.2", "led1:C", "black", [ "v0", "h76.8" ] ],
+    [ "esp:GND.2", "led2:C", "black", [ "v0", "h115.2" ] ],
+    [ "esp:GND.2", "led3:C", "black", [ "v0", "h153.6" ] ]
+  ],
+  "dependencies": {}
+}
